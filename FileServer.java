@@ -60,8 +60,10 @@ class ThreadClass implements Runnable { // Runnable Interface 구현
           e.printStackTrace();
         }
  		
-        try {
-            while (true) {
+        try 
+	{
+            while (true) 
+	    {
                 Socket s = listener.accept();
                 InputStream input = s.getInputStream();
                 int cnt = 0;
@@ -73,17 +75,23 @@ class ThreadClass implements Runnable { // Runnable Interface 구현
                 }
                 System.out.println(filename+" is received.");
             }
-        } catch (IOException e) {
+        } 
+	catch (IOException e) 
+	{
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
-		}
-        finally {
-            try {
-				listener.close();
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
+	}
+        finally 
+	{
+            try 
+	    {
+		listener.close();
+	    } 
+	    catch (IOException e) 
+	    {
+		// TODO Auto-generated catch block
 				//e.printStackTrace();
-			}
+	    }
         } 		
     } 
 } 
