@@ -5,3 +5,34 @@
 "vaccine":{"1st":"done","2nd":"expected","3rd":null},
 "children":[{"name":"spiderboy","age":10},{"name":"spidergirl","age":8}],
 "address":null}
+
+
+JsonObject jsonObj = new JsonObject();
+		jsonObj.addProperty("name", "spiderman");
+		jsonObj.addProperty("age", 45);
+		jsonObj.addProperty("married", true);
+		
+		JsonArray jsonArr = new JsonArray();
+		jsonArr.add("martial art");
+		jsonArr.add("gun");
+		jsonObj.add("specialty", jsonArr);
+		
+		JsonObject jsonObj2 = new JsonObject();
+		jsonObj2.addProperty("1st", "done");
+		jsonObj2.addProperty("2nd", "expected");
+		jsonObj2.add("3rd", null);		
+		jsonObj.add("vaccine", jsonObj2);
+	
+		JsonArray jsonArr2 = new JsonArray();
+		jsonObj2 = new JsonObject();
+		jsonObj2.addProperty("name", "spiderboy");
+		jsonObj2.addProperty("age", 10);
+		jsonArr2.add(jsonObj2);
+	
+		jsonObj2 = new JsonObject();
+		jsonObj2.addProperty("name", "spidergirl");
+		jsonObj2.addProperty("age", 8);
+		jsonArr2.add(jsonObj2);
+
+		jsonObj.add("children", jsonArr2);
+		jsonObj.add("address", null);
